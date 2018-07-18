@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+ int n,ans;
+ scanf("%d",&n);
+ ans=findsum(n);
+ printf("Answer %d\n",ans);
+}
+int findsum(int n)
+{
+  if(n!=0)
+    return (n%10+findsum(n/10));
+  else
+    return 0;
+}
